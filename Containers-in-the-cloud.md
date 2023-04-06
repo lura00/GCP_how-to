@@ -43,7 +43,7 @@ Distributed systems
 - Framework rests on K8s and GKE On-Prem.
 - Provides a rich set of tools for monitoring and maintenance.
 
-Cloud side of hybrid cloud
-
+### Hybrid architechture
+![alt text](https://github.com/lura00/GCP_how-to/blob/main/anthos-hybrid-architechture.PNG)
 
 
