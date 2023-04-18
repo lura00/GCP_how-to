@@ -64,3 +64,5 @@ Flexible also supports:
 - Benefit from custom configurations and libraries, while focusing on writing code.
 - Customize the runtime and the operating system of your VM. Standard runtimes include Python, Java, Go, Node.js, PHP, .NET and Ruby.
 - Customize or provide runtime by supplying a custom Docker image or Dockerfile.
+
+![alt text](https://github.com/lura00/GCP_how-to/blob/main/anthos-hybrid-architechture.PNG)
