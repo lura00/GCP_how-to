@@ -70,7 +70,9 @@ In this task, you will build a simple express-based NodeJS application which res
 
 3. Create a "package.json" file, then add the following content to it:
 
-        nano package.json
+        vim package.json
+Press "i" to "insert" text, then "esc" to stop edit.
+----------------------------------------------------------------------
 
         {
           "name": "helloworld",
@@ -89,12 +91,14 @@ In this task, you will build a simple express-based NodeJS application which res
 
 Most importantly, the file above contains a start script command and a dependency on the Express web application framework.
 
-4. Press CTRL+X, then Y to save the "package.json" file.
+4. Press :wq and enter to save and exit "package.json" file.
 
 Next, in the same directory, create a "index.js" file, and copy the following lines into it:
 
-    nano index.js
-    Copied!
+    vim index.js
+Press "i" to "insert" text, then "esc" to stop edit.
+----------------------------------------------------------------------------------
+
     const express = require('express');
     const app = express();
     const port = process.env.PORT || 8080;
@@ -108,13 +112,15 @@ Next, in the same directory, create a "index.js" file, and copy the following li
 
 This code creates a basic web server that listens on the port defined by the PORT environment variable. Your app is now finished and ready to be containerized and uploaded to Container Registry.
 
-6. Press CTRL+X, then Y to save the "index.js" file.
+6. Press :wq and enter to save and exit "index.js" file.
 
 
 ## Task 3. Containerize your app and upload it to Artifact Registry
 1. To containerize the sample app, create a new file named Dockerfile in the same directory as the source files, and add the following content:
 
-        nano Dockerfile
+        vim Dockerfile
+Press "i" to "insert" text, then "esc" to stop edit.
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
         # Use the official lightweight Node.js 12 image.
         # https://hub.docker.com/_/node
@@ -134,7 +140,7 @@ This code creates a basic web server that listens on the port defined by the POR
         # Run the web service on container startup.
         CMD [ "npm", "start" ]
 
-2. Press CTRL+X, then Y to save the Dockerfile file.
+2. Press :wq and enter to save and exit Dockerfile file.
 
 3. Now, build your container image using Cloud Build by running the following command from the directory containing the Dockerfile. (Note the $GOOGLE_CLOUD_PROJECT environmental variable in the command, which contains your lab's Project ID):
 
