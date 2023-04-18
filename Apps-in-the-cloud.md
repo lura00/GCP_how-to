@@ -66,3 +66,66 @@ Flexible also supports:
 - Customize or provide runtime by supplying a custom Docker image or Dockerfile.
 
 ![alt text](https://github.com/lura00/GCP_how-to/blob/main/standard-flexible-env-compare.PNG)
+
+## Google Cloud API management tools
+### APIs
+- A Clean, well-defined interface.
+- Underlying implementation can change.
+- Changes to the API are made with versions.
+
+Google Cloud supports 3 API management tools.
+- Cloud Endpoint.
+- Apigee Edge.
+- API Gateway.
+
+### Cloud Endpoint
+- Distributed API management system.
+- Provides an API console, hosting, logging, monitoring, and other features.
+- Use with any APIs that support the OpenAPI specs.
+- Support apps running in App Engine, GKE and Compute Engine.
+- Clients include Android, iOS and Javascript.
+
+### API Gateway
+-  Backend implementations can vary for a single service provider.
+-  Provide secure access to your backend services through a well-defined REST API.
+-  Clients consume your REST APIs to implement standalone apps.
+
+### Apigee Edge
+- Specific focus on business problems, like rate limiting, quotas and analytics.
+- Many Apigee Edge users provice a software service to other companies.
+- Backend services for Apigee Edge don't need to be in Google Cloud.
+
+## Cloud Run
+- A managed compute platform that can run stateless containers. Used for ex in pub/sub-events.
+- Serverless, removing the need for infrastructure management.
+- Built on Knative, an open API and runtime environment built on Kubernetes.
+- Can automatically scale up and down from zero almost instantaneously, charging only for the resources used.
+
+Cloud Run workflow:
+1. Write your code, source code => 2. Build and package your code to an container image app and push to => 3. Artifact Registry, deploy on Cloud Run.
+- Cloud Run can only deploy apps that are stored in an Artifact Registry.
+- You can build and push your own code/images to an artifactory and deploy it, deploy an image that is already in the Artifact Registry.
+- Once you have deployed you get a uniqe HTTPS URL back.
+
+You can work from your source code or directly push a container. If you work with source code Cloud Run will build a container of it. 
+
+Flow of Cloud Run web apps.
+
+https://***.run.app or 
+https://your.domain 
+==>                    
+Client ==HTTPS==> [ Cloud Run Proxy ==HTTP==> Container]
+
+Cloud Run fixing ssl certificate by itself.
+
+You pay for what you use or what is still active.
+
+Acceptable programming languages:
+- Java
+- Python
+- Node.js
+- PHP
+- Go
+- C++
+
+As long as your app handles web requests.
